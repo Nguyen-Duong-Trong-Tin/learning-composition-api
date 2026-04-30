@@ -5,11 +5,11 @@
 
       <div class="form-group">
         <label>First name</label>
-        <input type="text" class="form-control" @input="handleChangeFirstName">
+        <input type="text" class="form-control" v-model="firstName">
       </div>
       <div class="form-group">
         <label>Last name</label>
-        <input type="text" class="form-control" @input="handleChangeLastName">
+        <input type="text" class="form-control" v-model="lastName">
       </div>
 
       <p class="card-text">Fullname: {{ fullName }}</p>
@@ -25,18 +25,11 @@ export default {
     const firstName = ref("");
     const lastName = ref("");
 
-    function handleChangeFirstName(event) {
-      firstName.value = event.target.value;
-    }
-    function handleChangeLastName(event) {
-      lastName.value = event.target.value;
-    }
-
     const fullName = computed(() => `${firstName.value} ${lastName.value}`);
 
     return {
-      handleChangeFirstName,
-      handleChangeLastName,
+      firstName,
+      lastName,
       fullName
     }
   }
