@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue';
+import { isReactive, isRef, reactive, ref } from 'vue';
 
 export default {
   // data() {
@@ -36,6 +36,9 @@ export default {
       user.fullName = "Nguyen Huynh My Han";
       user.age = 18;
     }, 2000);
+
+    console.log(isRef(fullName));
+    console.log(isReactive(user));
 
     return {
       fullName,
