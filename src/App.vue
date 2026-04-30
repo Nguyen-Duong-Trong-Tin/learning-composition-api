@@ -12,6 +12,9 @@
     <div class="mb-3"></div>
 
     <learning-computed></learning-computed>
+    <div class="mb-3"></div>
+
+    <learning-watch></learning-watch>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ import LearningReactivity from './components/LearningReactivity.vue';
 import LearningProp from './components/LearningProps.vue';
 import LearningMethod from './components/LearningMethod.vue';
 import LearningComputed from './components/LearningComputed.vue';
+import LearningWatch from './components/LearningWatch.vue';
 
 export default {
   name: 'App',
@@ -27,7 +31,8 @@ export default {
     LearningReactivity,
     LearningProp,
     LearningMethod,
-    LearningComputed
+    LearningComputed,
+    LearningWatch
   }
 }
 </script>
