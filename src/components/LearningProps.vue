@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <img :src="imageUrl" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}">
+  <div class="card text-left">
+    <div class="card-body">
+      <h4 class="card-title">Props</h4>
+      <img class="card-img-top" :src="imageUrl">
+    </div>
   </div>
 </template>
 <script>
