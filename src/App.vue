@@ -3,16 +3,22 @@
 
   <div class="container">
     <learning-reactivity></learning-reactivity>
+
+    <div class="my-3"></div>
+
+    <learning-prop imageUrl="https://images.pexels.com/photos/19884401/pexels-photo-19884401.jpeg"></learning-prop>
   </div>
 </template>
 
 <script>
 import LearningReactivity from './components/LearningReactivity.vue';
+import LearningProp from './components/LearningProps.vue';
 
 export default {
   name: 'App',
   components: {
-    LearningReactivity
+    LearningReactivity,
+    LearningProp
   }
 }
 </script>
