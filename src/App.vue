@@ -18,6 +18,9 @@
     <div class="mb-3"></div>
 
     <learning-template-ref></learning-template-ref>
+    <div class="mb-3"></div>
+
+    <learning-provide-inject></learning-provide-inject>
   </div>
 </template>
 
@@ -28,6 +31,8 @@ import LearningMethod from './components/LearningMethod.vue';
 import LearningComputed from './components/LearningComputed.vue';
 import LearningWatch from './components/LearningWatch.vue';
 import LearningTemplateRef from './components/LearningTemplateRef.vue';
+import LearningProvideInject from './components/LearningProvideInject.vue';
+import { provide, ref } from 'vue';
 
 export default {
   name: 'App',
@@ -37,7 +42,18 @@ export default {
     LearningMethod,
     LearningComputed,
     LearningWatch,
-    LearningTemplateRef
+    LearningTemplateRef,
+    LearningProvideInject
+  },
+  setup() {
+    const appAge = ref(1);
+
+    provide("appName", "Learning composition API");
+    provide("appAge", appAge);
+
+    setInterval(() => {
+      ++appAge.value;
+    }, 2000);
   }
 }
 </script>
