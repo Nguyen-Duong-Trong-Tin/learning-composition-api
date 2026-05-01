@@ -21,6 +21,9 @@
     <div class="mb-3"></div>
 
     <learning-provide-inject></learning-provide-inject>
+    <div class="mb-3"></div>
+
+    <learning-lifecycle-hook></learning-lifecycle-hook>
   </div>
 </template>
 
@@ -32,6 +35,7 @@ import LearningComputed from './components/LearningComputed.vue';
 import LearningWatch from './components/LearningWatch.vue';
 import LearningTemplateRef from './components/LearningTemplateRef.vue';
 import LearningProvideInject from './components/LearningProvideInject.vue';
+import LearningLifecycleHook from './components/LearningLifecycleHook.vue';
 import { provide, ref } from 'vue';
 
 export default {
@@ -43,7 +47,8 @@ export default {
     LearningComputed,
     LearningWatch,
     LearningTemplateRef,
-    LearningProvideInject
+    LearningProvideInject,
+    LearningLifecycleHook
   },
   setup() {
     const appAge = ref(1);
